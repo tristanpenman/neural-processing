@@ -1,0 +1,25 @@
+FROM python:3.11-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_NO_CACHE_DIR=1 \
+    PYTHONPATH=/workspace/python
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends gosu \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+COPY python/requirements.txt /tmp/requirements.txt
+RUN python -m venv /opt/venv \
+    && /opt/venv/bin/python -m pip install --upgrade pip \
+    && /opt/venv/bin/python -m pip install -r /tmp/requirements.txt \
+    && rm /tmp/requirements.txt
+
+ENV PATH="/opt/venv/bin:$PATH"
+
+COPY scripts/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["/bin/bash"]
