@@ -46,10 +46,10 @@ if len(sys.argv) > 1:
         print("Could not K as an integer.")
         sys.exit(1)
 
-# Input matrices, first is 4xK
+# Input matrices, first is 4 x K
 A = [[i * j for i in range(K)] for j in range(4)]
 
-# Second is Kx4
+# Second is K x 4
 B = [[i + j for i in range(4)] for j in range(K)]
 
 # Initialise a matrix multiplier
