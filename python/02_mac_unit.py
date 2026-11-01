@@ -16,7 +16,7 @@ def parse_int(i):
             sys.exit(1)
         else:
             return value
-    except:
+    except ValueError:
         print(f"Could not parse argument #{i} as an integer.")
         sys.exit(1)
 

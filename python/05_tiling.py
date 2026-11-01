@@ -2,6 +2,7 @@
 
 import sys
 
+
 class MAC_Unit:
     def __init__(self):
         self.accumulator = 0
@@ -52,7 +53,7 @@ def parse_int(i):
             sys.exit(1)
         else:
             return value
-    except:
+    except ValueError:
         print(f"Could not parse argument #{i} as an integer.")
         sys.exit(1)
 
@@ -89,7 +90,6 @@ for row_offset in range(0, M, 4):
         for row_index in range(min(4, M - row_offset)):
             for col_index in range(min(4, N - col_offset)):
                 C[row_offset + row_index][col_offset + col_index] = tile_result[row_index][col_index]
-
 
 # Output the result
 for row in C:

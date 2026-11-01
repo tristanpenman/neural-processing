@@ -2,6 +2,7 @@
 
 import sys
 
+
 class MAC_Unit:
     def __init__(self):
         self.accumulator = 0
@@ -42,8 +43,8 @@ if len(sys.argv) > 1:
         if K <= 0:
             print('K must be a positive integer.')
             sys.exit(1)
-    except:
-        print("Could not K as an integer.")
+    except ValueError:
+        print("Could not parse K as an integer.")
         sys.exit(1)
 
 # Input matrices, first is 4 x K
