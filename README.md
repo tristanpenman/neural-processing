@@ -6,7 +6,7 @@ Python examples that illustrate concepts in matrix multiplication, NPU and TPU a
 
 These examples have minimal dependencies, so it should be possible to run them directly using your system Python.
 
-Alternatively, use [`python-shell.sh`](scripts/python-shell.sh) to start a Python 3 shell in Docker. The container installs dependencies from [requirements.txt](python/requirements.txt).
+Alternatively, use [`python-shell.sh`](scripts/python-shell.sh) to start a Python 3.11 shell in Docker. The container installs dependencies from [requirements.txt](python/requirements.txt).
 
 ## Examples
 
