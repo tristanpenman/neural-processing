@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Multiply matrices using three nested loops."""
+# pylint: disable=invalid-name, duplicate-code
 
 import sys
 
@@ -8,25 +10,26 @@ K = 8
 N = 8
 
 # Helper to parse integer arguments
-def parse_int(i):
+def parse_arg_as_int(argument_index):
+    """Parse a positive integer command-line argument."""
     try:
-        value = int(sys.argv[i])
+        value = int(sys.argv[argument_index])
         if value <= 0:
-            print(f"Argument #{i} must be a positive integer.")
+            print(f"Argument #{argument_index} must be a positive integer.")
             sys.exit(1)
         else:
             return value
     except ValueError:
-        print(f"Could not parse argument #{i} as an integer.")
+        print(f"Could not parse argument #{argument_index} as an integer.")
         sys.exit(1)
 
 # These can also be set from the command line
 if len(sys.argv) > 1:
-    M = parse_int(1)
+    M = parse_arg_as_int(1)
 if len(sys.argv) > 2:
-    K = parse_int(2)
+    K = parse_arg_as_int(2)
 if len(sys.argv) > 3:
-    N = parse_int(3)
+    N = parse_arg_as_int(3)
 
 # Input matrices, first is M x K
 A = [[i * j for i in range(K)] for j in range(M)]
