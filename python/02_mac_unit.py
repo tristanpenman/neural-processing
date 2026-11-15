@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Multiply matrices using a dedicated multiply-accumulate unit."""
-# pylint: disable=invalid-name, duplicate-code
 
 import sys
 

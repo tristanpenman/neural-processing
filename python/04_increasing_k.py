@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Multiply 4x4 matrices with a configurable shared dimension."""
-# pylint: disable=invalid-name, duplicate-code
 
 import sys
 

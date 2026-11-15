@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Multiply arbitrary-sized matrices using 4x4 tiles."""
-# pylint: disable=invalid-name, duplicate-code
 
 import sys
 

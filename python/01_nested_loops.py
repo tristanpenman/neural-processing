@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Multiply matrices using three nested loops."""
-# pylint: disable=invalid-name, duplicate-code
 
 import sys
 

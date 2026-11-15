@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Multiply two 4x4 matrices with independent MAC units."""
-# pylint: disable=invalid-name, duplicate-code
 
 class MAC_Unit:
     """Accumulate products of input values."""
