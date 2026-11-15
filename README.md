@@ -15,3 +15,7 @@ Alternatively, use [`python-shell.sh`](scripts/python-shell.sh) to start a Pytho
 - [03_matmul_4x4.py](python/03_matmul_4x4.py) - Introduce a specialised 4x4 matrix multiplier.
 - [04_increasing_k.py](python/04_increasing_k.py) - Shows that we can arbitrarily scale the shared dimension K.
 - [05_tiling.py](python/05_tiling.py) - Handle arbitrary matrices using a 4x4 matrix multiplier.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
