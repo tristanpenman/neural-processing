@@ -10,11 +10,17 @@ Alternatively, use [`python-shell.sh`](scripts/python-shell.sh) to start a Pytho
 
 ## Examples
 
+Basic examples working up to tiling:
+
 - [01_nested_loops.py](python/01_nested_loops.py) - Naive matrix multiplication using nested loops.
 - [02_mac_unit.py](python/02_mac_unit.py) - Refactor first example to use a Multiply-Accumulate (MAC) unit.
 - [03_matmul_4x4.py](python/03_matmul_4x4.py) - Introduce a specialised 4x4 matrix multiplier.
 - [04_increasing_k.py](python/04_increasing_k.py) - Shows that we can arbitrarily scale the shared dimension K.
 - [05_tiling.py](python/05_tiling.py) - Handle arbitrary matrices using a 4x4 matrix multiplier.
+
+Advanced examples illustrating systolic array architectures:
+
+- [06_systolic_array.py](./06_systolic_array.py) - Simulate a systolic array for matrix multiplication.
 
 ## License
 
