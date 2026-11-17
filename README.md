@@ -2,11 +2,27 @@
 
 Python examples that illustrate concepts in matrix multiplication, NPU and TPU architecture, and tensor operations.
 
+This is intended as complementary material for my post _[Neural Processing from the Gound Up](https://tristanpenman.com/blog/posts/2026/11/17/neural-processing-from-the-ground-up)_, which introduces the concepts that underlie neural processing, and explores how different neural network accelerators realise those concepts in silicon.
+
 ## Dependencies
 
-These examples have minimal dependencies, so it should be possible to run them directly using your system Python.
+These examples have minimal dependencies, and should run directly using your system Python.
 
-Alternatively, use [`python-shell.sh`](scripts/python-shell.sh) to start a Python 3.11 shell in Docker. The container installs dependencies from [requirements.txt](python/requirements.txt).
+Alternatively, start a Python 3.11 shell using Docker Compose:
+
+```
+./scripts/python-shell.sh
+```
+
+## Tests
+
+A small test suite has been included:
+
+```
+./python/test.sh
+```
+
+This uses results from example 1 ([01_nested_loops.py](python/01_nested_loops.py)) as ground truth when running example 2 onwards.
 
 ## Examples
 
