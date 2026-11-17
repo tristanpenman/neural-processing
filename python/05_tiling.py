@@ -58,6 +58,17 @@ class Matmul_4x4:
                     b_matrix[shared_index][j + tile_col_origin],
                 )
 
+
+def copy_result(tile_result, result, row_offset, col_offset, matrix_shape):
+    """Copy the valid portion of a tile into the result matrix."""
+    max_m, max_n = matrix_shape
+    for row_index in range(min(4, max_m - row_offset)):
+        for col_index in range(min(4, max_n - col_offset)):
+            result[row_offset + row_index][col_offset + col_index] = (
+                tile_result[row_index][col_index]
+            )
+
+
 # Default values of M, K and N
 M = 8
 K = 8
@@ -105,13 +116,7 @@ for row_offset in range(0, M, 4):
         for k in range(K):
             matmul.tick(A, B, k, (row_offset, col_offset), (M, N))
 
-        # Copy the valid part of tile.result() into C at [row_offset:, col_offset:]
-        tile_result = matmul.result()
-        for row_index in range(min(4, M - row_offset)):
-            for col_index in range(min(4, N - col_offset)):
-                C[row_offset + row_index][col_offset + col_index] = (
-                    tile_result[row_index][col_index]
-                )
+        copy_result(matmul.result(), C, row_offset, col_offset, (M, N))
 
 # Output the result
 for row in C:
