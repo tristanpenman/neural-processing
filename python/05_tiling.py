@@ -59,12 +59,12 @@ class Matmul_4x4:
                 )
 
 
-def copy_result(tile_result, result, row_offset, col_offset, matrix_shape):
+def copy_result(tile_result, result, tile_row_offset, tile_col_offset, matrix_shape):
     """Copy the valid portion of a tile into the result matrix."""
     max_m, max_n = matrix_shape
-    for row_index in range(min(4, max_m - row_offset)):
-        for col_index in range(min(4, max_n - col_offset)):
-            result[row_offset + row_index][col_offset + col_index] = (
+    for row_index in range(min(4, max_m - tile_row_offset)):
+        for col_index in range(min(4, max_n - tile_col_offset)):
+            result[tile_row_offset + row_index][tile_col_offset + col_index] = (
                 tile_result[row_index][col_index]
             )
 
