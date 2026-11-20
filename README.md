@@ -2,7 +2,7 @@
 
 Python examples that illustrate concepts in matrix multiplication, NPU and TPU architecture, and tensor operations.
 
-This is intended as complementary material for my post _[Neural Processing from the Gound Up](https://tristanpenman.com/blog/posts/2026/11/17/neural-processing-from-the-ground-up)_, which introduces the concepts that underlie neural processing, and explores how different neural network accelerators realise those concepts in silicon.
+This is intended as complementary material for my post _[Neural Processing from the Ground Up](https://tristanpenman.com/blog/posts/2026/11/17/neural-processing-from-the-ground-up)_. The post introduces the concepts that underlie neural processing, and explores how different neural network accelerators realise those concepts in silicon.
 
 ## Dependencies
 
